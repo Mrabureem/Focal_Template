@@ -1,0 +1,237 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #252e30;
+  --second-color: #2ecc71;
+  --section-color: #f2f2f1;
+  --section-padding: 80px;
+  --title-color: #556469;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  height: 5000px;
+}
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+header img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+header .header-box {
+  text-align: center;
+}
+header .header-box h1 {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+header .header-box button {
+  background: none;
+  padding: 15px 30px;
+  border: 1px solid;
+  color: inherit;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  header .header-box h1 {
+    font-size: 3rem;
+  }
+  header .header-box button {
+    font-size: 1.2rem;
+  }
+}
+header .bolits {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  bottom: 30px;
+  right: 10%;
+}
+header .bolits span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid white;
+  display: block;
+  border-radius: 50%;
+}
+header .bolits span.active {
+  background-color: white;
+}
+nav {
+  background-color: var(--main-color);
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+nav .logo {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+}
+nav .logo .logo-char {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.486);
+  font-size: 1.2em;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+nav .logo-text span {
+  color: var(--second-color);
+}
+@media (max-width: 768px) {
+  nav .nave-icon {
+    display: block;
+  }
+  .nav-links {
+    position: relative;
+  }
+  .nav-links .nav-icon {
+    color: var(--second-color);
+  }
+  nav .active-links {
+    position: absolute;
+    background-color: var(--main-color);
+    width: 200px;
+    list-style: none;
+    right: 0;
+    padding: 0;
+    display: none;
+  }
+  nav .active-links::before {
+    content: "";
+    position: absolute;
+    border: 15px solid transparent;
+    border-bottom-color: var(--main-color);
+    right: 0;
+    top: -30px;
+  }
+  nav .active-links a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.3s;
+  }
+  nav .active-links li:not(:last-child) a {
+    border-bottom: 1px solid #eee;
+  }
+  nav .nav-links a.active {
+    color: var(--second-color);
+  }
+  nav .nav-links a:hover {
+    color: var(--second-color);
+  }
+  .nav-links:hover .active-links {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  nav .nav-icon {
+    display: none;
+  }
+}
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 70px;
+}
+.features .title {
+  font-size: 2em;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: gray;
+  margin: 0 0 30px 0;
+}
+.features .discription {
+  color: #777;
+  line-height: 1.8;
+}
+.about-me {
+  background-color: var(--section-color);
+  position: relative;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.about-me .container {
+  display: flex;
+  justify-content: flex-end;
+}
+.about-me img {
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+.about-me .about-me-info {
+  width: 50%;
+  position: relative;
+}
+.about-me .about-info-top .title {
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.about-me .about-info-top p {
+  color: #777;
+  line-height: 1.8;
+}
+.about-me .about-info-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+.about-me .about-info-bottom .skill-box {
+  width: 45%;
+  display: flex;
+  gap: 30px;
+}
+.about-me .about-info-bottom .skill-box .icon {
+  color: var(--second-color);
+}
+.about-me .about-info-bottom .skill-box .skill-text h3 {
+  margin-top: 0;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.about-me .about-info-bottom .skill-box .skill-text p {
+  color: #777;
+  line-height: 1.8;
+}
