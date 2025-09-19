@@ -112,11 +112,21 @@ nav .logo .logo-char {
 nav .logo-text span {
   color: var(--second-color);
 }
-@media (max-width: 768px) {
+nav .active-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: 0.3s;
+}
+nav .active-links a:hover {
+  color: var(--second-color);
+}
+@media (max-width: 1023px) {
   nav .nave-icon {
     display: block;
   }
-  .nav-links {
+  nav {
     position: relative;
   }
   .nav-links .nav-icon {
@@ -125,27 +135,19 @@ nav .logo-text span {
   nav .active-links {
     position: absolute;
     background-color: var(--main-color);
-    width: 200px;
+    width: 100%;
     list-style: none;
-    right: 0;
+    left: 0;
+    top: 35px;
     padding: 0;
-    display: none;
-  }
-  nav .active-links::before {
-    content: "";
-    position: absolute;
-    border: 15px solid transparent;
-    border-bottom-color: var(--main-color);
-    right: 0;
-    top: -30px;
+    height: 0;
+    overflow: hidden;
+    z-index: 1000;
+    transition: height 0.3s;
   }
   nav .active-links a {
     display: block;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    padding: 10px;
-    transition: 0.3s;
+    padding: 10px 20px;
   }
   nav .active-links li:not(:last-child) a {
     border-bottom: 1px solid #eee;
@@ -155,14 +157,21 @@ nav .logo-text span {
   }
   nav .nav-links a:hover {
     color: var(--second-color);
+    padding-left: 30px;
   }
-  .nav-links:hover .active-links {
-    display: block;
+  .nav-links.active .active-links {
+    height: 280px;
   }
 }
 @media (min-width: 1024px) {
   nav .nav-icon {
     display: none;
+  }
+  nav .active-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
   }
 }
 .features {
