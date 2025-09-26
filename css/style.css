@@ -12,17 +12,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  height: 5000px;
 }
 .container {
   padding-left: 10px;
   padding-right: 10px;
   margin: auto;
-}
-@media (min-width: 768px) {
-  .container {
-    width: 80%;
-  }
+  width: 1170px;
+  max-width: 90%;
 }
 header {
   height: 100vh;
@@ -57,7 +53,14 @@ header .header-box button {
   padding: 15px 30px;
   border: 1px solid;
   color: inherit;
+  border-radius: 3px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+header .header-box button:hover {
+  background-color: white;
+  color: black;
 }
 @media (min-width: 768px) {
   header .header-box h1 {
@@ -194,24 +197,21 @@ nav .active-links a:hover {
   color: #777;
   line-height: 1.8;
 }
+@media (max-width: 640px) {
+  .features .container {
+    text-align: center;
+  }
+}
 .about-me {
   background-color: var(--section-color);
-  position: relative;
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-}
-.about-me .container {
-  display: flex;
-  justify-content: flex-end;
+  text-align: center;
 }
 .about-me img {
-  position: absolute;
   height: 100%;
-  top: 0;
+  width: 100%;
 }
 .about-me .about-me-info {
-  width: 50%;
-  position: relative;
+  padding: 20px;
 }
 .about-me .about-info-top .title {
   text-transform: uppercase;
@@ -220,27 +220,47 @@ nav .active-links a:hover {
 .about-me .about-info-top p {
   color: #777;
   line-height: 1.8;
-}
-.about-me .about-info-bottom {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-top: 60px;
+  margin-bottom: 30px;
 }
 .about-me .about-info-bottom .skill-box {
-  width: 45%;
-  display: flex;
-  gap: 30px;
+  margin-bottom: 30px;
 }
 .about-me .about-info-bottom .skill-box .icon {
   color: var(--second-color);
 }
 .about-me .about-info-bottom .skill-box .skill-text h3 {
-  margin-top: 0;
+  margin-top: 30px;
   text-transform: uppercase;
   color: var(--title-color);
 }
 .about-me .about-info-bottom .skill-box .skill-text p {
   color: #777;
   line-height: 1.8;
+}
+@media (min-width: 1024px) {
+  .about-me .about-info-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+}
+@media (min-width: 1280px) {
+  .about-me {
+    display: flex;
+    gap: 30px;
+    padding-right: 5%;
+    text-align: start;
+    align-items: center;
+  }
+
+  .about-me .about-info-bottom {
+    gap: 30px;
+  }
+  .about-info-bottom .skill-box {
+    display: flex;
+    gap: 20px;
+  }
+  .about-me .about-info-bottom .skill-box .skill-text h3 {
+    margin-top: 0;
+  }
 }
