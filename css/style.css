@@ -316,8 +316,9 @@ nav .active-links a:hover {
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 0%;
   background-color: var(--second-color);
+  transition: 0.5s;
 }
 .my-skills .col .skill .skill-bar .fill-bar::after {
   content: attr(data-skill);
