@@ -12,6 +12,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  height: 5000px;
 }
 .container {
   padding-left: 10px;
@@ -263,4 +264,105 @@ nav .active-links a:hover {
   .about-me .about-info-bottom .skill-box .skill-text h3 {
     margin-top: 0;
   }
+}
+.my-skills {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.my-skills .container {
+  text-align: center;
+}
+.my-skills .title {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: var(--title-color);
+  margin: 0 0 20px;
+}
+.my-skills .col .des {
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.btn {
+  padding: 10px 30px;
+  background: none;
+  border: 2px solid var(--second-color);
+  color: var(--second-color);
+  text-transform: uppercase;
+  font-size: 18px;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: var(--second-color);
+  color: white;
+}
+.my-skills .col .skill {
+  margin-top: 50px;
+}
+.my-skills .col .skill .title {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.my-skills .col .skill .skill-bar {
+  background-color: var(--section-color);
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+.my-skills .col .skill .skill-bar .fill-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: var(--second-color);
+}
+.my-skills .col .skill .skill-bar .fill-bar::after {
+  content: attr(data-skill);
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 1024px) {
+  .my-skills .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+  }
+  .my-skills .container .col {
+    width: 45%;
+  }
+}
+.resume {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-color);
+  text-align: center;
+  position: relative;
+}
+.resume::after {
+  content: "";
+  position: absolute;
+  border: 30px solid transparent;
+  border-top-color: var(--section-color);
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.resume .title {
+  text-transform: uppercase;
+  margin: 0 0 30px;
+  color: var(--title-color);
+  font-size: 30px;
+}
+.resume .des {
+  line-height: 1.8;
+  color: #777;
+  margin-bottom: 30px;
 }
