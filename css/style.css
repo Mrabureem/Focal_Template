@@ -2,6 +2,10 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --main-color: #252e2f;
+  --section-color: #f2f2f2;
+}
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +13,7 @@ body {
   height: 4000px;
 }
 .container {
-  width: 1170px;
+  width: 90%;
   margin: auto;
 }
 .hero {
@@ -93,4 +97,66 @@ body {
 }
 .nav-bar .links li:hover {
   color: #1a8c4b;
+}
+.features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.features .title {
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-bottom: 40px;
+}
+.features .des {
+  color: #777;
+  line-height: 1.8;
+}
+.about-me {
+  background-color: var(--section-color);
+}
+.about-me .container {
+  display: flex;
+  align-items: center;
+}
+.about-me img {
+  transform: translateX(-110px);
+}
+.about-me .about-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.about-content .about-box .title {
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-bottom: 40px;
+}
+.about-content .about-box .des {
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #777;
+}
+.about-content .feat-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+.about-content .feat-box .feat {
+  display: flex;
+  gap: 20px;
+}
+.about-content .feat-box .feat .icon {
+  color: #30cb6e;
+}
+.about-content .feat-box .feat .title {
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  color: var(--main-color);
+}
+.about-content .feat-box .feat .des {
+  line-height: 1.8;
+  color: #777;
 }
