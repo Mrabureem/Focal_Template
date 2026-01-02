@@ -313,3 +313,55 @@ body {
 .work-experience .des p:first-child {
   margin-bottom: 30px;
 }
+.quote {
+  background-color: var(--section-color);
+  text-align: center;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.quote blockquote {
+  max-width: 700px;
+  margin: auto;
+  color: var(--paragraph-color);
+  margin-bottom: 40px;
+}
+.quote .author {
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+.quote .bollets span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid var(--second-color);
+  margin-left: 5px;
+}
+.quote .bollets span.active {
+  background-color: var(--second-color);
+}
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  text-align: center;
+}
+.portfolio .title {
+  text-transform: uppercase;
+  font-size: 2em;
+  color: var(--main-color);
+  margin-bottom: 30px;
+}
+.portfolio .des {
+  line-height: 1.8;
+  color: var(--paragraph-color);
+  margin-bottom: var(--section-padding);
+}
+.portfolio .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.portfolio .projects img {
+  max-width: 100%;
+}
