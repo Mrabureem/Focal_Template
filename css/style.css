@@ -365,3 +365,88 @@ body {
 .portfolio .projects img {
   max-width: 100%;
 }
+.footer {
+  background-color: var(--main-color);
+  color: white;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.footer .title {
+  text-transform: uppercase;
+  font-size: 2em;
+}
+.footer .contact-me {
+  display: flex;
+  gap: 30px;
+}
+.footer .contact-me .box {
+  flex: 1;
+}
+.footer .contact-me .box .des {
+  color: var(--paragraph-color);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.footer .contact-me .box address {
+  line-height: 2;
+  margin-bottom: 40px;
+  color: var(--paragraph-color);
+}
+.footer .contact-me .box .contact {
+  color: var(--paragraph-color);
+}
+.footer .contact-me .box .contact span {
+  display: inline-block;
+  margin-right: 40px;
+  color: white;
+  text-transform: capitalize;
+}
+.footer .contact-me .box form label {
+  display: block;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.footer .contact-me .box form label input {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+  background-color: #4b5456;
+  border: none;
+  outline: none;
+}
+.footer .contact-me .box form input[type="submit"] {
+  color: white;
+  text-transform: uppercase;
+  padding: 20px;
+  background-color: #181f21;
+  border: none;
+  font-weight: bold;
+}
+.copyright {
+  background-color: #181f21;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.copyright p {
+  color: var(--paragraph-color);
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+.copyright .social {
+  display: flex;
+  gap: 10px;
+}
+.copyright .icon {
+  width: 30px;
+  height: 30px;
+  background-color: var(--paragraph-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
